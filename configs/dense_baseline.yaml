@@ -1,0 +1,26 @@
+# Dense Retrieval Baseline Configuration
+model:
+  name: dense_baseline
+  encoder: all-MiniLM-L6-v2
+  text_fields:
+    - track_name
+    - artist_name
+    - tags
+
+retrieval:
+  top_k: 20
+  batch_size: 512
+  index_path: ./experiments/runs/faiss_index.bin
+
+data:
+  raw_dir: ./data/raw
+  splits:
+    - train
+    - dev
+
+evaluation:
+  k_values: [1, 10, 20]
+
+output:
+  results_dir: ./experiments/results
+  submission_dir: ./submissions

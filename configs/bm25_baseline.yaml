@@ -1,0 +1,23 @@
+# BM25 Baseline Configuration
+model:
+  name: bm25_baseline
+  text_fields:
+    - track_name
+    - artist_name
+    - tags
+
+retrieval:
+  top_k: 20
+
+data:
+  raw_dir: ./data/raw
+  splits:
+    - train
+    - dev
+
+evaluation:
+  k_values: [1, 10, 20]
+
+output:
+  results_dir: ./experiments/results
+  submission_dir: ./submissions

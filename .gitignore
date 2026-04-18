@@ -1,0 +1,142 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Virtual Environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ── Data files (too large for git — download separately) ─────────────────────
+data/raw/
+data/processed/
+data/splits/
+data/
+*.parquet
+*.csv
+*.tsv
+*.json.gz
+*.jsonl.gz
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.arrow
+*.feather
+*.npy
+*.npz
+
+# ── Model weights & checkpoints ───────────────────────────────────────────────
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+checkpoints/
+saved_models/
+
+# ── Experiments & Tracking ────────────────────────────────────────────────────
+experiments/
+experiments/runs/
+experiments/mlruns/
+experiments/results/
+mlruns/
+wandb/
+.wandb/
+lightning_logs/
+outputs/          # Hydra default output dir
+multirun/         # Hydra multirun output dir
+
+# ── FAISS indices ─────────────────────────────────────────────────────────────
+*.bin
+*.index
+*.faiss
+
+# ── Submissions ───────────────────────────────────────────────────────────────
+submissions/*.json
+submissions/*.zip
+submissions/*.csv
+
+# ── Secrets & Environment ─────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.env.local
+secrets.yaml
+secrets.json
+
+# ── Baselines (cloned via scripts/clone_baselines.sh) ────────────────────────
+baselines/music-crs-baselines/
+baselines/music-crs-evaluator/
+
+# ── IDE & Editors ─────────────────────────────────────────────────────────────
+.vscode/settings.json
+.vscode/*.code-snippets
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+*.out
+
+# ── Coverage & Testing ────────────────────────────────────────────────────────
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+.tox/
+.nox/
+nosetests.xml
+test-results/
+
+# ── Type checking ─────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyright/
+.ruff_cache/
+
+# ── Docs build ────────────────────────────────────────────────────────────────
+docs/_build/
+site/
