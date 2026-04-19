@@ -7,7 +7,7 @@ description: CodaBench submission format for the RecSys 2026 Music-CRS Challenge
 
 ## Submission File Format
 
-The submission is a **single JSON file** (`predictions.json`) containing an array of prediction objects. Each object represents one turn prediction within a conversation session.
+The submission is a **single JSON file** (`prediction.json`) containing an array of prediction objects. Each object represents one turn prediction within a conversation session.
 
 ```json
 [
@@ -70,16 +70,16 @@ predict_turn = user_turns - turns_with_music  # exactly 1 turn per session
 
 ## Packaging for CodaBench Upload
 
-Package the JSON file into a **ZIP archive** with the JSON named `predictions.json` inside:
+Package the JSON file into a **ZIP archive** with the JSON named `prediction.json` inside:
 
 ```python
 import json, zipfile
 
-with open('predictions.json', 'w') as f:
+with open('prediction.json', 'w') as f:
     json.dump(submission, f, ensure_ascii=False)
 
 with zipfile.ZipFile('submission.zip', 'w', zipfile.ZIP_DEFLATED) as zf:
-    zf.write('predictions.json', 'predictions.json')
+    zf.write('prediction.json', 'prediction.json')
 ```
 
 Save to: `submissions/blind_a_<model-name>_<date>.zip`
@@ -125,7 +125,7 @@ Before uploading to CodaBench, verify:
 - [ ] Track IDs are ordered by relevance (most relevant first)
 - [ ] `session_id` and `turn_number` match the evaluation dataset exactly
 - [ ] JSON saved with `ensure_ascii=False`
-- [ ] Packaged as ZIP containing `predictions.json`
+- [ ] Packaged as ZIP containing `prediction.json`
 
 ## Validation Code Snippet
 
@@ -134,7 +134,7 @@ import json
 import pandas as pd
 
 # Load submission
-with open('predictions.json') as f:
+with open('prediction.json') as f:
     submission = json.load(f)
 
 # Load valid track IDs

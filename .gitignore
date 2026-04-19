@@ -92,6 +92,11 @@ secrets.json
 baselines/music-crs-baselines/
 baselines/music-crs-evaluator/
 
+# ── AI Agent Files ────────────────────────────────────────────────────────────
+AGENTS.md
+INSTRUCTIONS.md
+.agents/
+
 # ── IDE & Editors ─────────────────────────────────────────────────────────────
 .vscode/settings.json
 .vscode/*.code-snippets
